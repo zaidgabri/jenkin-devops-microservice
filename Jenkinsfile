@@ -4,8 +4,8 @@
 // stages are obligatoire to add , POST for adding conditions to the stages and checking about the status 
 
 pipeline  {
-		// agent  any 
-		agent {  docker { image 'maven:3.9.5'}}
+		agent  any 
+		// agent {  docker { image 'maven:3.9.5'}}
 		stages{
 			stage('Build'){
 				steps{
