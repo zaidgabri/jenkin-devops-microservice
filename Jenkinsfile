@@ -5,7 +5,7 @@
 
 pipeline  {
 		// agent  any 
-		agent {docker {image 'maven:3.6.3'}}
+		agent {  docker { image 'maven:3.6.3'}}
 		stages{
 			stage('Build'){
 				steps{
@@ -35,10 +35,7 @@ pipeline  {
 			}
 			failure {
 				echo "I run when u fail "
-			}changed {
-					echo "I run when i change my status from fail to success or the oppsite  "
-
-			}//unstabled
+			}//unstabled changed 
 	
 	}
 }
