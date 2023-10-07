@@ -4,10 +4,12 @@
 // stages are obligatoire to add , POST for adding conditions to the stages and checking about the status 
 
 pipeline  {
-		agent  any 
+		// agent  any 
+		agent {docker {image 'maven:3.6.3'}}
 		stages{
 			stage('Build'){
 				steps{
+					sh "mvn --version"
 					echo "Build"
 				}
 			}
@@ -33,7 +35,10 @@ pipeline  {
 			}
 			failure {
 				echo "I run when u fail "
-			}
+			}changed {
+					echo "I run when i change my status from fail to success or the oppsite  "
+
+			}//unstabled
 	
 	}
 }
