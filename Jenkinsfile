@@ -30,8 +30,9 @@ pipeline  {
 				echo "I run when u are successful"
 			}
 			failure {
-				echo "I run when u fail"
+				echo "I run when u fail "
 			}
 	
+	}
 }
  //node refere to the machaine that run the pipeline  there is two thing sccropted synatx and the decratlative synatx 
